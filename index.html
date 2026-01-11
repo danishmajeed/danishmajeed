@@ -40,6 +40,52 @@ body {
     padding:25px;
     border-radius:12px;
 }
+    .brand-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.brand-card{
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.brand-title{
+  font-weight:700;
+  font-size:16px;
+}
+
+.brand-overlay{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.92);
+  opacity:0;
+  transition:0.25s ease;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:18px;
+  gap:8px;
+}
+
+.brand-card:hover .brand-overlay{
+  opacity:1;
+}
+
+.brand-overlay .job{
+  font-size:13px;
+  color:#00e0ff;
+}
+
+.brand-overlay .cta{
+  margin-top:8px;
+  font-size:12px;
+  color:white;
+}
+
 footer {
     background:#000;
     padding:30px;

@@ -64,11 +64,21 @@ body {
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
 }
-.card {
-    background:#15151d;
-    padding:25px;
-    border-radius:12px;
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  backdrop-filter: blur(10px);
+  border-radius:16px;
+  padding:22px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  transition:.3s ease;
 }
+
+.card:hover{
+  border-color:#00e0ff;
+  box-shadow:0 0 40px rgba(0,224,255,.25);
+}
+    
     .brand-link{
   text-decoration:none;
   color:inherit;

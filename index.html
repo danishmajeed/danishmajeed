@@ -92,22 +92,32 @@ body {
 }
 
 .brand-overlay{
-  position:absolute;
-  inset:0;
+  position: static;          /* absolute hatado */
   background: rgba(0,0,0,0.92);
-  opacity:0;
-  transition:0.25s ease;
+  border-radius: 12px;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  transition: 0.25s ease;
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:flex-start;
-  padding:18px;
   gap:8px;
+  padding: 0;               /* hover pe padding add hoga */
+  margin-top: 0;            /* hover pe margin add hoga */
 }
 
 .brand-card:hover .brand-overlay{
-  opacity:1;
+  opacity: 1;
+  max-height: 200px;        /* content show */
+  padding: 14px;
+  margin-top: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
+
 
 .brand-overlay .job{
   font-size:13px;

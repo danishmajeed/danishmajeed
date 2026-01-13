@@ -11,13 +11,42 @@ body {
     background:#0b0b0f;
     color:white;
 }
-.hero {
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background: radial-gradient(circle at top, #0e2a36 0%, #05070a 60%);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(120deg, rgba(0,255,255,0.15), transparent 40%),
+    linear-gradient(300deg, rgba(0,120,255,0.15), transparent 40%);
+  animation: glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+  from{opacity:.6}
+  to{opacity:1}
+}
+
+.hero h1{
+  font-size:clamp(48px,6vw,90px);
+  letter-spacing:-1px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#b8d7e5;
+}
+
 }
 .hero h1 {
     font-size:60px;
